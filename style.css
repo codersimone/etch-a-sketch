@@ -1,0 +1,25 @@
+html {
+  font-size: 16px;
+}
+
+#container {
+  font-size: 1.4vw;
+  display: flex;
+  flex-wrap: wrap;
+  width: 60vw;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 2px solid black;
+}
+
+.cell {
+  /* automatic calculation for grid adaptability to the size of the parent container */
+  /* dividing the entire width of the parent (100%) into 16 equal parts */
+  width: calc(100% / 16);
+  /* the proportion of the sides of the cells */
+  /* width (1) : height (1) */
+  aspect-ratio: 1 / 1;
+  border: 1px solid gray;
+  /* the frame does not increase the size */
+  box-sizing: border-box;
+}
