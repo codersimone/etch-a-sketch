@@ -1,25 +1,26 @@
-html {
-  font-size: 16px;
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1A1A1D;
 }
 
 #container {
-  font-size: 1.4vw;
+  /* font-size: 5vw; */
   display: flex;
   flex-wrap: wrap;
-  width: 60vw;
-  max-width: 800px;
-  margin: 0 auto;
-  border: 2px solid black;
+  width: 40vw;
+  max-width: 600px;
+  border: 2px solid #C3073F;
 }
 
 .cell {
-  /* automatic calculation for grid adaptability to the size of the parent container */
   /* dividing the entire width of the parent (100%) into 16 equal parts */
   width: calc(100% / 16);
-  /* the proportion of the sides of the cells */
-  /* width (1) : height (1) */
   aspect-ratio: 1 / 1;
-  border: 1px solid gray;
+  border: 1px solid #950740;
   /* the frame does not increase the size */
   box-sizing: border-box;
 }
