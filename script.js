@@ -8,3 +8,11 @@ for (let i = 0; i < totalCells; i++) {
     cell.classList.add('cell');
     container.appendChild(cell);
 }
+
+const cells = document.querySelectorAll('.cell');
+
+cells.forEach((cell) => {
+    cell.addEventListener('mouseenter', () => {
+        cell.classList.add('coloredTrail');
+    });
+});

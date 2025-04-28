@@ -1,26 +1,38 @@
+html {
+  /* width includes paddings and borders, so the frame does not increase the size */
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1A1A1D;
+  background-color: rgb(27, 27, 29);
 }
 
 #container {
-  /* font-size: 5vw; */
   display: flex;
   flex-wrap: wrap;
   width: 40vw;
   max-width: 600px;
-  border: 2px solid #C3073F;
+  border: 2px solid rgb(195, 7, 63);
 }
 
 .cell {
   /* dividing the entire width of the parent (100%) into 16 equal parts */
   width: calc(100% / 16);
   aspect-ratio: 1 / 1;
-  border: 1px solid #950740;
-  /* the frame does not increase the size */
-  box-sizing: border-box;
+  border: 1px solid rgb(149, 7, 64);
+}
+
+.coloredTrail {
+  background-color: rgba(149, 7, 64, 0.8);
 }
