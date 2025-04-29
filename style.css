@@ -18,16 +18,40 @@ body {
   background-color: rgb(27, 27, 29);
 }
 
-#container {
+.generalWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.gridButton {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(27, 27, 29);
+  background-color: rgb(195, 7, 63);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.gridButton:hover {
+  background-color: rgb(111, 34, 50);
+}
+
+.gridContainer {
   display: flex;
   flex-wrap: wrap;
-  width: 40vw;
-  max-width: 600px;
+  width: 960px;
+  height: 960px;
   border: 2px solid rgb(195, 7, 63);
 }
 
-.cell {
+.gridCell {
   /* dividing the entire width of the parent (100%) into 16 equal parts */
+  /* the value 16 is replaced in the JS file */
   width: calc(100% / 16);
   aspect-ratio: 1 / 1;
   border: 1px solid rgb(149, 7, 64);
