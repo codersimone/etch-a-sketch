@@ -1,18 +1,36 @@
-const gridSize = 16;
-const totalCells = gridSize * gridSize;
+const generalWrapper = document.querySelector('.generalWrapper');
 
-const container = document.querySelector('#container');
+const gridСreationButton = document.createElement('button');
+gridСreationButton.classList.add('gridButton');
+gridСreationButton.textContent = 'Create a new grid';
+generalWrapper.appendChild(gridСreationButton);
 
-for (let i = 0; i < totalCells; i++) {
-    const cell = document.createElement('div');
-    cell.classList.add('cell');
-    container.appendChild(cell);
+const gridContainer = document.createElement('div');
+gridContainer.classList.add('gridContainer');
+generalWrapper.appendChild(gridContainer);
+
+function createGrid(size) {
+    gridContainer.innerHTML = '';
+
+    for (let i = 0; i < size * size; i++) {
+        const gridCell = document.createElement('div');
+        gridCell.classList.add('gridCell');
+        gridCell.style.width = `calc(100% / ${size})`;
+        gridCell.addEventListener('mouseenter', () => {
+            gridCell.classList.add('coloredTrail');
+        });
+        gridContainer.appendChild(gridCell);
+    }
 }
 
-const cells = document.querySelectorAll('.cell');
+createGrid(16);
 
-cells.forEach((cell) => {
-    cell.addEventListener('mouseenter', () => {
-        cell.classList.add('coloredTrail');
-    });
+gridСreationButton.addEventListener('click', () => {
+    let input = prompt('Enter the grid size from 1 to 100:');
+    let size = parseInt(input);
+    if (isNaN(size) || size < 1 || size > 100) {
+        alert('Incorrect input! Please enter a number from 1 to 100!');
+        return;
+    }
+    createGrid(size);
 });
