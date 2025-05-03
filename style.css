@@ -56,7 +56,3 @@ body {
   aspect-ratio: 1 / 1;
   border: 1px solid rgb(149, 7, 64);
 }
-
-.coloredTrail {
-  background-color: rgba(149, 7, 64, 0.8);
-}
