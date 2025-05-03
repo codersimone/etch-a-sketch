@@ -25,10 +25,10 @@ The project simulates drawing behavior with dynamic colors and a progressive opa
     The square's opacity changes by 10%, creating a fading or glowing effect.
     The direction of opacity change reverses when fully transparent or fully opaque — creating a "wave" effect.
 
-🎨 Random Color Generator
-Each square receives a unique color generated with Math.random() upon first interaction.
+**🎨 Random Color Generator**
 
-Colors persist between hovers and only opacity is animated afterward.
+-   Each square receives a unique color generated with Math.random() upon first interaction.
+-   Colors persist between hovers and only opacity is animated afterward.
 
 **🔁 Progressive Opacity Cycle**
 
