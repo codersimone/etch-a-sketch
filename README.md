@@ -16,54 +16,42 @@ The project simulates drawing behavior with dynamic colors and a progressive opa
 
 ## Features
 
-✅ Interactive Grid Drawing
-A grid of square cells is dynamically generated using JavaScript.
+**✅ Interactive Grid Drawing**
 
-Users can specify the grid size (from 1 to 100) via a prompt.
-
-On first mouse hover, each square receives a random RGB color.
-
-With each additional hover:
-
-The square's opacity changes by 10%, creating a fading or glowing effect.
-
-The direction of opacity change reverses when fully transparent or fully opaque — creating a "wave" effect.
+-   A grid of square cells is dynamically generated using JavaScript.
+-   Users can specify the grid size (from 1 to 100) via a prompt.
+-   On first mouse hover, each square receives a random RGB color.
+-   With each additional hover:
+    The square's opacity changes by 10%, creating a fading or glowing effect.
+    The direction of opacity change reverses when fully transparent or fully opaque — creating a "wave" effect.
 
 🎨 Random Color Generator
 Each square receives a unique color generated with Math.random() upon first interaction.
 
 Colors persist between hovers and only opacity is animated afterward.
 
-🔁 Progressive Opacity Cycle
-Opacity starts at 1.0 (fully visible).
+**🔁 Progressive Opacity Cycle**
 
-Repeated mouse entries progressively reduce opacity by 0.1 per hover.
+-   Opacity starts at 1.0 (fully visible).
+-   Repeated mouse entries progressively reduce opacity by 0.1 per hover.
+-   When opacity reaches 0.0, it begins increasing again up to 1.0, then repeats.
+-   Creates a smooth fading in and out cycle for each cell.
 
-When opacity reaches 0.0, it begins increasing again up to 1.0, then repeats.
+**🧠 Technical Highlights**
 
-Creates a smooth fading in and out cycle for each cell.
+-   Uses dataset attributes to store and manage:
+-   The current color of the square (rgb)
+-   The current opacity level (opacity)
+-   The current fade direction (direction)
+-   Whether the square has already been colored (colorSet)
+-   Grid responsiveness is handled with flexbox, calc(), and aspect-ratio to maintain uniform sizing.
+-   Clean and modular code separation: HTML (structure), CSS (styling), and JS (logic).
 
-🧠 Technical Highlights
-Uses dataset attributes to store and manage:
+**📁 File Structure**
 
-The current color of the square (rgb)
-
-The current opacity level (opacity)
-
-The current fade direction (direction)
-
-Whether the square has already been colored (colorSet)
-
-Grid responsiveness is handled with flexbox, calc(), and aspect-ratio to maintain uniform sizing.
-
-Clean and modular code separation: HTML (structure), CSS (styling), and JS (logic).
-
-📁 File Structure
-index.html — Loads the container and button, includes stylesheet and script.
-
-style.css — Handles layout, button styles, and visual design of the grid.
-
-script.js — Handles grid generation, random coloring, and opacity transitions.
+-   index.html — Loads the container and button, includes stylesheet and script.
+-   style.css — Handles layout, button styles, and visual design of the grid.
+-   script.js — Handles grid generation, random coloring, and opacity transitions.
 
 ## How To Use
 
